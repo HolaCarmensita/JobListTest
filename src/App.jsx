@@ -1,20 +1,17 @@
 import './App.css';
 import { useState, useEffect } from 'react';
 import JobList from './components/JobList/JobList';
+import { fetchJobs } from './services/api';
 
 function App() {
   const [jobs, setJobs] = useState([]);
 
   useEffect(() => {
-    const fetchJobs = async () => {
-      const res = await fetch(
-        'https://feed.jobylon.com/feeds/7d7e6fd12c614aa5af3624b06f7a74b8/?format=json'
-      );
-      const data = await res.json();
+    const getJobs = async () => {
+      const data = await fetchJobs();
       setJobs(data);
     };
-
-    fetchJobs();
+    getJobs();
   }, []);
 
   return (
