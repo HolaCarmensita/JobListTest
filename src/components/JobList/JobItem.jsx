@@ -10,6 +10,12 @@ const JobCard = styled.article`
   padding: 1.2rem;
   border: 0.5px solid rgba(0, 0, 0, 0.08);
   border-radius: 1rem;
+  transition: all 0.2s ease;
+
+  &:hover {
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+    transform: translateY(-1px);
+  }
 
   &:focus {
     outline: 2px solid var(--color-primary-2);
@@ -84,7 +90,7 @@ const LocationContainer = styled.div`
   }
 `;
 
-const IconButton = styled.button`
+const OpenButton = styled.button`
   display: flex;
   justify-content: center;
   align-items: center;
@@ -97,7 +103,8 @@ const IconButton = styled.button`
   border-radius: 0.5rem;
 
   &:hover {
-    background-color: rgba(0, 0, 0, 0.05);
+    background-color: var(--color-primary-2);
+    color: white;
   }
 
   &:focus-visible {
@@ -131,9 +138,9 @@ function JobItem({ job }) {
           {job.experience}
         </ExperienceBadge>
       </ExperienceContainer>
-      <IconButton aria-label='View job details'>
+      <OpenButton aria-label='View job details'>
         <ArrowNarrowRight strokeWidth={1.5} />
-      </IconButton>
+      </OpenButton>
     </JobCard>
   );
 }
