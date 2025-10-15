@@ -14,10 +14,10 @@ const JobCard = styled.article`
 
   &:hover {
     box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
-    transform: translateY(-1px);
+    transform: translateY(-1px) scale(1.02);
   }
 
-  &:focus {
+  &:focus-visible {
     outline: 2px solid var(--color-primary-2);
     outline-offset: 2px;
   }
