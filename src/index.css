@@ -1,0 +1,118 @@
+/* Font Declarations */
+@font-face {
+  font-family: 'GT Walsheim Condensed';
+  src: url('./assets/fonts/GT-Walsheim-Condensed-Light-Trial.woff2')
+    format('woff2');
+  font-weight: 300;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'GT Walsheim Condensed';
+  src: url('./assets/fonts/GT-Walsheim-Condensed-Regular-Trial.woff2')
+    format('woff2');
+  font-weight: 400;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'GT Walsheim Condensed';
+  src: url('./assets/fonts/GT-Walsheim-Condensed-Medium-Trial.woff2')
+    format('woff2');
+  font-weight: 500;
+  font-style: normal;
+}
+
+:root {
+  --font-main: 'GT Walsheim Condensed', 'Helvetica', system-ui, -apple-system,
+    BlinkMacSystemFont, 'Segoe UI', sans-serif;
+
+  --color-primary: #171572;
+  --color-primary-2: #0068ff;
+  --color-primary-3: #ff7a6d;
+  --color-secondary-1: #3ac88d;
+  --color-secondary-2: #7f73ff;
+  --color-secondary-3: #ffde00;
+  --color-secondary-4: #ff9d00;
+
+  --color-bg-primary: #fff9f0;
+  --color-bg-secondary: #edf4f9;
+
+  --color-text-primary: #171572;
+  --color-text-secondary: #585858;
+
+  --color-border: #e9e9e9;
+
+  /* Responsive Typography */
+  --h1-size: max(2.8rem, min(6vw, 4rem));
+  --h2-size: max(2.25rem, min(5vw, 3.375rem));
+  --h3-size: max(1.6rem, min(4vw, 2.25rem));
+  --h4-size: 1.5rem;
+  --h5-size: 1.2rem;
+  --h6-size: 1rem;
+}
+
+/* CSS Reset & Base Styles */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+* {
+  margin: 0;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+html,
+body {
+  font-family: 'GT Walsheim Condensed', sans-serif;
+  line-height: 1.5;
+  -webkit-font-smoothing: antialiased;
+  overflow-x: clip;
+}
+
+img,
+picture,
+video,
+canvas,
+svg {
+  display: block;
+  max-width: 100%;
+}
+
+input,
+button,
+textarea,
+select {
+  font: inherit;
+  font-family: 'GT Walsheim Condensed', sans-serif;
+  padding: 0px;
+}
+
+p,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  overflow-wrap: break-word;
+  padding: 0px;
+}
+
+p {
+  text-wrap: pretty;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  text-wrap: balance;
+}
