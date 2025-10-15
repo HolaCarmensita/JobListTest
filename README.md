@@ -1,16 +1,35 @@
-# React + Vite
+# JobylonList
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+## Running Locally
 
-Currently, two official plugins are available:
+```bash
+npm install
+npm run dev
+```
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) (or [oxc](https://oxc.rs) when used in [rolldown-vite](https://vite.dev/guide/rolldown)) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+Open `http://localhost:5173` in your browser.
 
-## React Compiler
+## Live Demo
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+If hosted: `http://jobylonlist.netlify.app`
 
-## Expanding the ESLint configuration
+## Notes
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+**Design Decisions:**
+
+- Used styled-components for component-scoped CSS and theming
+- Responsive mobile-first design with CSS Grid for job cards
+- Accessibility focus: proper ARIA labels, keyboard navigation, focus states
+- Color-coded experience badges for visual hierarchy
+
+**Trade-offs:**
+
+- No complicated UI for longer text for job card, therefore the formatJobData function
+- No error handling or loading states - prioritized core functionality
+- Limited responsive breakpoints - focused on desktop but worked from mobile to show you my regular workflow
+
+**With More Time:**
+
+- Add loading spinner, errormessages and error handling for API calls
+- More animations and micro-interactions
+- Include pagination/virtualization and lazy loading for larger lists
