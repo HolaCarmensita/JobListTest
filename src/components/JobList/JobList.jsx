@@ -9,19 +9,32 @@ const JobListContainer = styled.div`
   gap: 2rem;
 `;
 
-const Joblist = styled.div`
+const Joblist = styled.ul`
   display: flex;
   flex-direction: column;
-  gap: 1rem;
+  gap: 0.75rem;
+
+  @media (min-width: 768px) {
+    gap: 1rem;
+  }
+  list-style: none;
+  padding: 0 1rem; /* Luft på sidorna för mobil */
+  margin: 0;
+  width: 100%;
+  max-width: 850px;
 `;
 
 function JobList({ jobs }) {
   return (
     <JobListContainer>
-      <h1>JobylonList</h1>
+      <header>
+        <h1 tabIndex={0}>List of jobs</h1>
+      </header>
       <Joblist>
         {jobs.map((job) => (
-          <JobItem key={job.id} job={job} />
+          <li key={job.id}>
+            <JobItem job={job} />
+          </li>
         ))}
       </Joblist>
     </JobListContainer>

@@ -1,7 +1,7 @@
 import styled from 'styled-components';
 import { MarkerPin01, ArrowNarrowRight } from '@untitledui/icons';
 
-const JobCard = styled.div`
+const JobCard = styled.article`
   display: grid;
   grid-template-columns: 1fr 1fr 1fr auto;
   align-items: center;
@@ -11,15 +11,21 @@ const JobCard = styled.div`
   border: 0.5px solid rgba(0, 0, 0, 0.08);
   border-radius: 1rem;
 
+  &:focus {
+    outline: 2px solid var(--color-primary-2);
+    outline-offset: 2px;
+  }
+
   @media (min-width: 768px) {
     grid-template-columns: 1fr 1fr 1fr 1fr 1fr auto;
   }
 `;
 
 const Title = styled.p`
-  font-weight: 500;
-  text-align: left;
   font-weight: 700;
+  text-align: left;
+  margin: 0;
+  font-size: 1rem;
 `;
 
 const Company = styled.p`
@@ -78,19 +84,25 @@ const LocationContainer = styled.div`
   }
 `;
 
-const Button = styled.button`
+const IconButton = styled.button`
+  display: flex;
+  justify-content: center;
+  align-items: center;
   background: none;
   border: none;
-  padding: 0;
+  padding: 0.5rem;
   margin: 0;
-  font: inherit;
-  color: inherit;
+  color: #666;
   cursor: pointer;
-  outline: none;
+  border-radius: 0.5rem;
+
+  &:hover {
+    background-color: rgba(0, 0, 0, 0.05);
+  }
 
   &:focus-visible {
-    outline: 0.125rem solid currentColor;
-    outline-offset: 0.125rem;
+    outline: 2px solid var(--color-primary-2);
+    outline-offset: 2px;
   }
 
   svg {
@@ -99,8 +111,14 @@ const Button = styled.button`
 `;
 
 function JobItem({ job }) {
+  const ariaLabel = `${job.title} at ${job.company?.name}, located in ${
+    job.locationShort
+  }${job.experience ? `, ${job.experience} level` : ''}${
+    job.employmentType ? `, ${job.employmentType}` : ''
+  }`;
+
   return (
-    <JobCard>
+    <JobCard tabIndex={0} aria-label={ariaLabel}>
       <Title>{job.titleShort}</Title>
       <Company>{job.company?.name}</Company>
       <EmploymentType>{job.employmentType}</EmploymentType>
@@ -113,10 +131,9 @@ function JobItem({ job }) {
           {job.experience}
         </ExperienceBadge>
       </ExperienceContainer>
-
-      <Button>
+      <IconButton aria-label='View job details'>
         <ArrowNarrowRight strokeWidth={1.5} />
-      </Button>
+      </IconButton>
     </JobCard>
   );
 }
