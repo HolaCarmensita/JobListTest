@@ -13,6 +13,10 @@ Open `http://localhost:5173` in your browser.
 
 If hosted: `http://jobylonlist.netlify.app`
 
+## Figma design
+
+Figma file: `https://www.figma.com/proto/DveL8qex3jCyK37cDLZPsn/JobylonList?node-id=12-161&p=f&t=UkIAznF1oPXuRysJ-0&scaling=contain&content-scaling=fixed&page-id=0%3A1`
+
 ## Notes
 
 **Design Decisions:**
@@ -30,7 +34,8 @@ If hosted: `http://jobylonlist.netlify.app`
 
 **With More Time i would:**
 
-- Add Tailwind instead of styled components due to more responsivenes built-in
+- On hoover on Jobitem a short description would show. Would be super neat but no time now
 - Add loading spinner, errormessages and error handling for API calls
+- Add Tailwind instead of styled components due to more responsivenes built-in
 - More animations and micro-interactions
 - Include pagination/virtualization and lazy loading for larger lists
