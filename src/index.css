@@ -23,6 +23,14 @@
   font-style: normal;
 }
 
+@font-face {
+  font-family: 'GT Walsheim Condensed';
+  src: url('./assets/fonts/GT-Walsheim-Condensed-Bold-Trial.woff2')
+    format('woff2');
+  font-weight: 700;
+  font-style: normal;
+}
+
 :root {
   --font-main: 'GT Walsheim Condensed', 'Helvetica', system-ui, -apple-system,
     BlinkMacSystemFont, 'Segoe UI', sans-serif;
@@ -70,9 +78,11 @@ html {
 html,
 body {
   font-family: 'GT Walsheim Condensed', sans-serif;
+  color: var(--color-text-primary);
   line-height: 1.5;
   -webkit-font-smoothing: antialiased;
   overflow-x: clip;
+  background-color: var(--color-bg-secondary);
 }
 
 img,

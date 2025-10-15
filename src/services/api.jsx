@@ -6,6 +6,8 @@ const formatJobData = (job) => ({
   company: job.company,
   locations: job.locations,
   locationShort: job.locations?.[0]?.location?.text?.split(',')[0] || '',
+  employmentType: job.employment_type || '',
+  experience: job.experience || '',
 });
 
 export const fetchJobs = async () => {
