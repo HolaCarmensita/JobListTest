@@ -34,7 +34,7 @@ Figma file: `https://www.figma.com/proto/DveL8qex3jCyK37cDLZPsn/JobylonList?node
 
 **With More Time I would:**
 
-- On hoover on Jobitem a short description would show. Would be super neat but no time now
+- On hoover on Jobitem, a short description of the position could show. Would be super neat but no time now
 - Add loading spinner, errormessages and error handling for API calls
 - Add Tailwind instead of styled components due to more responsivenes built-in
 - More animations and micro-interactions
