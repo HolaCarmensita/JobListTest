@@ -32,7 +32,7 @@ Figma file: `https://www.figma.com/proto/DveL8qex3jCyK37cDLZPsn/JobylonList?node
 - No error handling or loading states to prioritized core functionality
 - Limited responsive breakpoints to focused on desktop but worked from mobile to show you my regular workflow
 
-**With More Time i would:**
+**With More Time I would:**
 
 - On hoover on Jobitem a short description would show. Would be super neat but no time now
 - Add loading spinner, errormessages and error handling for API calls
